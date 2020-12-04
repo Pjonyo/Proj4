@@ -1,13 +1,13 @@
 #pragma once
 #include "Game.h"
 
-#define TIME_LIMIT 20
 #define OBJECT_SIZE 4
 
 class RainGame : public Game
 {
 	enum { rain = 1, light = 2 };
 	enum { center =1};
+	const int TIME_LIMIT = 20;
 
 	class Object
 	{

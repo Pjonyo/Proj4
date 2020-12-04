@@ -13,7 +13,7 @@ void MemoGame::Play()
 	Cursor.dwSize = 1;
 	SetConsoleCursorInfo(consoleHandle, &Cursor);
 
-	printf("start");
+	printf("게임설명 + 카운트다운 추가예정 (엔터누르면 시작)");
 	getchar();
 	system("cls");
 
@@ -35,14 +35,17 @@ void MemoGame::Play()
 			SetList(num + (combo / 3));
 			ansreset();
 			DisplayList();
-			
+			fflush;
 			check = 1;
 		}
-		fflush;
-		key = _getch();
-		check = Scoring(key);
-		Display_Score(40, 2);
-		Display_Combo(70, 2);
+		if (_kbhit())
+		{
+			
+			key = _getch();
+			check = Scoring(key);
+			Display_Score(40, 2);
+			Display_Combo(70, 2);
+		}
 		if (cur == num)
 		{
 			cur = 0;
@@ -80,8 +83,8 @@ int MemoGame::Scoring(char key)
 		SKY;
 		_mutex.lock();
 		list[cur].PrintKey();
-		_mutex.unlock();
 		Orgn;
+		_mutex.unlock();
 		ans.push_back(list[cur]);
 		ret = 1;
 		cur++;

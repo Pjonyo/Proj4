@@ -1,7 +1,7 @@
 #pragma once
 #include "Game.h"
 
-#define TIME_LIMIT 30
+
 #define FIRST_LINE_SIZE 12
 #define SECOND_LINE_SIZE 11
 #define THIRD_LINE_SIZE 10
@@ -10,6 +10,7 @@
 #define START_SIZE 4
 class MemoGame : public Game
 {
+	const int TIME_LIMIT = 30;
 
 	class Key
 	{

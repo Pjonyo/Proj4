@@ -1,12 +1,12 @@
 #pragma once
 #include "Game.h"
 
-#define ARROW_SIZE 9
-#define TIME_LIMIT 20
+
 
 class ArrowGame : public Game
 {
-
+	#define ARROW_SIZE 9
+	const int TIME_LIMIT=20;
 	class Arrow
 	{
 	private:

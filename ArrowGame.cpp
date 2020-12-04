@@ -70,7 +70,7 @@ void ArrowGame::Play()
 	Cursor.dwSize = 1;
 	SetConsoleCursorInfo(consoleHandle, &Cursor);
 
-	printf("Press the enter\n");
+	printf("게임설명 + 카운트다운 추가예정 (엔터누르면 시작)\n");
 	getchar();
 	system("cls");
 
